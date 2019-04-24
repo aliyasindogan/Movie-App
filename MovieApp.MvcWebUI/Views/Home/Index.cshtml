@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MovieApp.MvcWebUI.Models.Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading"> Albüm Örneği</h1>
+        <p class="lead text-muted">Aşağıdaki film koleksiyonunu inceleyin. <br />Haydi hemen şimdi !</p>
+        <p><small><b>Asp.Net Core MVC | &copy; 2019</b></small></p>
+        
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            @foreach (var movie in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="~/images/1.jpg" alt="@movie.Name" />
+                        <div class="card-body">
+                            <p class="card-text">@movie.Name</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a asp-controller="Home" asp-action="Details" asp-route-id="@movie.Id" class="btn btn-sm btn-secondary">Detay</a>
+                                </div>
+                                <small class="text-muted">9 dakika</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

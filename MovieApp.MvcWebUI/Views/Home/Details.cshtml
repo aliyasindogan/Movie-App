@@ -1,0 +1,23 @@
+﻿@model MovieApp.MvcWebUI.Models.Movie
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container mt-5" >
+    <div class="row">
+        <div class="col-md-4">
+          @await Component.InvokeAsync("Menu")
+        </div>
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <img src="~/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                    <p class="card-text">@Model.Description</p>
+                    <p class="card-text"><small class="text-muted">Son güncelleme 3 dakika önce</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
