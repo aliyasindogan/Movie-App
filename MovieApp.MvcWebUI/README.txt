@@ -12,3 +12,5 @@ FontAwesome Icon Framework 4.7.0
 Proje Katmaları
 MovieApp (Solution)
 MovieApp.MvcWebUI (Web Sitesi)
+
+Web site: http://movieapp.aliyasindogan.com/
